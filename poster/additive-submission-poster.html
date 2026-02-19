@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabrication Lab - Join Our Moodle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: 8.5in 11in;
+      margin: 0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #1a1a1a;
+    }
+    
+    .poster {
+      width: 8.5in;
+      min-height: 11in;
+      background: #ffffff;
+      padding: 50px 60px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Title bar */
+    .title-bar {
+      margin-bottom: 40px;
+    }
+    
+    .main-title {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 48px;
+      font-weight: 1000;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #e74a3b;
+    }
+    
+    /* Top section with QR and headline */
+    .top-section {
+      display: flex;
+      gap: 50px;
+      margin-bottom: 40px;
+    }
+    
+    .qr-container {
+      flex-shrink: 0;
+    }
+    
+    .qr-code {
+      width: 180px;
+      height: 180px;
+      overflow: hidden;
+    }
+    
+    .qr-code img {
+      width: 100%;
+      height: 140%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    
+    .headline-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .breadcrumb {
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      color: #666;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    
+    .breadcrumb span {
+      margin: 0 8px;
+    }
+    
+    h1 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+    }
+    
+    .subtitle {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
+      max-width: 400px;
+    }
+    
+    /* Main content area */
+    .main-content {
+      display: flex;
+      gap: 50px;
+      flex: 1;
+    }
+    
+    .left-column {
+      flex: 1;
+    }
+    
+    .right-column {
+      width: 240px;
+      flex-shrink: 0;
+    }
+    
+    /* Steps section */
+    .steps-intro {
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .step {
+      margin-bottom: 24px;
+    }
+    
+    .step-title {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+    
+    .step-desc {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+    
+    /* Red accent box */
+    .info-box {
+      background: #e74a3b;
+      padding: 28px 24px;
+      color: #fff;
+    }
+    
+    .info-box h3 {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+    
+    .info-box ul {
+      list-style: none;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    
+    .info-box li {
+      margin-bottom: 2px;
+    }
+    
+    .info-box .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+      margin: 20px 0;
+    }
+    
+    /* Footer */
+    .footer {
+      margin-top: auto;
+      padding-top: 30px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    
+    .lab-info h2 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+    
+    .lab-info p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .contact {
+      text-align: right;
+    }
+    
+    .contact-email {
+      font-size: 14px;
+      font-weight: 500;
+      color: #e74a3b;
+    }
+    
+    .contact-label {
+      font-size: 11px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+    
+    @media print {
+      body {
+        padding: 0;
+      }
+      
+      .poster {
+        padding: 40px 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <div class="title-bar">
+      <h2 class="main-title">Digital Fabrication Laboratory</h2>
+    </div>
+    
+    <div class="top-section">
+      <div class="qr-container">
+        <div class="qr-code">
+          <img src="../assets/Moodle_QR.png" alt="QR Code - Scan to access Fabrication Lab Moodle">
+        </div>
+      </div>
+      
+      <div class="headline-section">
+        <h1>Join Our Moodle</h1>
+        <p class="subtitle">
+          Access equipment guides, safety information, design resources, 
+          and submission forms. Scan the code to get started.
+        </p>
+      </div>
+    </div>
+    
+    <div class="main-content">
+      <div class="left-column">
+        <div class="steps-intro">How to Enroll</div>
+        
+        <div class="step">
+          <div class="step-title">Scan the QR Code</div>
+          <div class="step-desc">Use your phone's camera to scan the code above.</div>
+        </div>
+        
+        <div class="step">
+          <div class="step-title">Log In with LSU Credentials</div>
+          <div class="step-desc">Sign in to Moodle with your myLSU username and password.</div>
+        </div>
+        
+        <div class="step">
+          <div class="step-title">Self-Enroll</div>
+          <div class="step-desc">Click "Enroll me" to join the Fabrication Laboratory course.</div>
+        </div>
+      </div>
+      
+      <div class="right-column">
+        <div class="info-box">
+          <h3>What You'll Find</h3>
+          <ul>
+            <li>Equipment guides</li>
+            <li>Safety information</li>
+            <li>Design resources</li>
+            <li>Submission forms</li>
+          </ul>
+          
+          <div class="divider"></div>
+          
+          <h3>Services</h3>
+          <ul>
+            <li>3D Printing</li>
+            <li>CNC Routing</li>
+            <li>3D Scanning</li>
+            <li>Vacuum Forming</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="lab-info">
+        <p>Art Building 123 · Atkinson 145<br>Monday – Friday · 8:30 AM – 4:30 PM</p>
+      </div>
+      <div class="contact">
+        <div class="contact-email">coad-fablab@lsu.edu</div>
+        <div class="contact-label">Questions?</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
