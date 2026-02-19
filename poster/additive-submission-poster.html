@@ -21,301 +21,321 @@
     
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #ffffff;
+      background: #f4f1e8;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 20px;
-      color: #1a1a1a;
     }
     
     .poster {
       width: 8.5in;
       min-height: 11in;
-      background: #ffffff;
-      padding: 50px 60px;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    /* Title bar */
-    .title-bar {
-      margin-bottom: 40px;
-    }
-    
-    .main-title {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 48px;
-      font-weight: 1000;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #cf1527;
-    }
-    
-    /* Top section with QR and headline */
-    .top-section {
-      display: flex;
-      gap: 50px;
-      margin-bottom: 40px;
-    }
-    
-    .qr-container {
-      flex-shrink: 0;
-    }
-    
-    .qr-code {
-      width: 180px;
-      height: 180px;
+      background: #f4f1e8;
+      position: relative;
       overflow: hidden;
     }
     
-    .qr-code img {
+    /* Big red bar */
+    .red-bar {
+      position: absolute;
       width: 100%;
-      height: 140%;
-      object-fit: cover;
-      object-position: top center;
+      height: 180px;
+      background: #be1e2d;
+      top: 0;
+      left: 0;
     }
     
-    .headline-section {
+    /* Black diagonal */
+    .black-diagonal {
+      position: absolute;
+      width: 200px;
+      height: 8px;
+      background: #1a1a1a;
+      top: 340px;
+      right: -20px;
+      transform: rotate(-45deg);
+    }
+    
+    /* Circle outline */
+    .circle-outline {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 10px solid #1a1a1a;
+      border-radius: 50%;
+      bottom: 180px;
+      right: 50px;
+    }
+    
+    /* Small red square */
+    .red-square {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: #be1e2d;
+      bottom: 240px;
+      right: 180px;
+    }
+    
+    /* Content */
+    .content {
+      position: relative;
+      z-index: 10;
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Header in red bar */
+    .header {
+      padding: 50px 60px 40px;
+      color: #fff;
+    }
+    
+    .lab-name {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      opacity: 0.9;
+    }
+    
+    /* Main content area */
+    .main {
+      padding: 50px 60px;
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-    }
-    
-    .breadcrumb {
-      font-size: 12px;
-      letter-spacing: 0.5px;
-      color: #666;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-    }
-    
-    .breadcrumb span {
-      margin: 0 8px;
     }
     
     h1 {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 30px;
+      font-size: 86px;
       font-weight: 900;
-      line-height: 1.1;
+      line-height: 0.9;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      letter-spacing: -3px;
+    }
+    
+    .headline-sub {
+      font-size: 86px;
+      font-weight: 900;
+      line-height: 0.9;
+      color: #be1e2d;
+      margin-bottom: 30px;
+      letter-spacing: -3px;
+    }
+    
+    .intro {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.5;
+      max-width: 400px;
+      margin-bottom: 50px;
+    }
+    
+    /* Two column layout */
+    .columns {
+      display: flex;
+      gap: 60px;
+    }
+    
+    .col-left {
+      flex: 1;
+    }
+    
+    .col-right {
+      width: 200px;
+    }
+    
+    /* QR Section */
+    .qr-box {
+      background: #1a1a1a;
+      padding: 20px;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+    
+    .qr-box img {
+      width: 120px;
+      height: 120px;
+      display: block;
+    }
+    
+    .scan-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       color: #1a1a1a;
       margin-bottom: 20px;
     }
     
-    .subtitle {
-      font-size: 15px;
-      color: #444;
-      line-height: 1.6;
-      max-width: 400px;
-    }
-    
-    /* Main content area */
-    .main-content {
-      display: flex;
-      gap: 50px;
-      flex: 1;
-    }
-    
-    .left-column {
-      flex: 1;
-    }
-    
-    .right-column {
-      width: 240px;
-      flex-shrink: 0;
-    }
-    
-    /* Steps section */
-    .steps-intro {
-      font-size: 13px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #1a1a1a;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #e0e0e0;
+    /* Steps */
+    .steps {
+      margin-bottom: 40px;
     }
     
     .step {
-      margin-bottom: 24px;
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #333;
     }
     
-    .step-title {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    .step-num {
+      font-weight: 900;
       font-size: 18px;
+      color: #be1e2d;
+      width: 24px;
+      flex-shrink: 0;
+    }
+    
+    /* Lists */
+    .list-section {
+      margin-bottom: 30px;
+    }
+    
+    .list-title {
+      font-size: 10px;
       font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 6px;
-    }
-    
-    .step-desc {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.5;
-    }
-    
-    /* Red accent box */
-    .info-box {
-      background: #cf1527;
-      padding: 28px 24px;
-      color: #fff;
-    }
-    
-    .info-box h3 {
-      font-size: 11px;
-      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 16px;
-      opacity: 0.9;
+      letter-spacing: 2px;
+      color: #be1e2d;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #1a1a1a;
     }
     
-    .info-box ul {
+    .list-section ul {
       list-style: none;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-    
-    .info-box li {
-      margin-bottom: 2px;
-    }
-    
-    .info-box .divider {
-      height: 1px;
-      background: rgba(255,255,255,0.3);
-      margin: 20px 0;
+      font-size: 13px;
+      line-height: 1.9;
+      color: #333;
     }
     
     /* Footer */
     .footer {
       margin-top: auto;
-      padding-top: 30px;
-      border-top: 1px solid #e0e0e0;
+      padding: 30px 60px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      border-top: 2px solid #1a1a1a;
+      margin-left: 60px;
+      margin-right: 60px;
+      padding-left: 0;
+      padding-right: 0;
     }
     
-    .lab-info h2 {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 6px;
-    }
-    
-    .lab-info p {
-      font-size: 13px;
+    .footer-location {
+      font-size: 12px;
       color: #666;
       line-height: 1.6;
     }
     
-    .contact {
+    .footer-contact {
       text-align: right;
     }
     
-    .contact-email {
-      font-size: 14px;
-      font-weight: 500;
-      color: #cf1527;
+    .footer-email {
+      font-size: 16px;
+      font-weight: 800;
+      color: #be1e2d;
     }
     
-    .contact-label {
-      font-size: 11px;
-      color: #888;
+    .footer-label {
+      font-size: 9px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-top: 4px;
+      letter-spacing: 1px;
+      color: #888;
     }
     
     @media print {
-      body {
-        padding: 0;
-      }
-      
-      .poster {
-        padding: 40px 50px;
-      }
+      body { padding: 0; }
     }
   </style>
 </head>
 <body>
   <div class="poster">
-    <div class="title-bar">
-      <h2 class="main-title">Digital Fabrication Laboratory</h2>
-    </div>
+    <!-- Geometric elements -->
+    <div class="red-bar"></div>
     
-    <div class="top-section">
-      <div class="qr-container">
-        <div class="qr-code">
-          <img src="../assets/Moodle_QR.png" alt="QR Code - Scan to access Fabrication Lab Moodle">
-        </div>
+    <div class="content">
+      <div class="header">
+        <div class="lab-name">Digital Fabrication Laboratory</div>
       </div>
       
-      <div class="headline-section">
-        <h1>Join Our Moodle</h1>
-        <p class="subtitle">
-          Access equipment guides, safety information, design resources, 
-          and submission forms. Scan the code to get started.
+      <div class="main">
+        <h1>JOIN</h1>
+        <div class="headline-sub">OUR MOODLE</div>
+        
+        <p class="intro">
+          Access material resources, safety information, 
+          design guides, and submission forms.
         </p>
-      </div>
-    </div>
-    
-    <div class="main-content">
-      <div class="left-column">
-        <div class="steps-intro">How to Enroll</div>
         
-        <div class="step">
-          <div class="step-title">Scan the QR Code</div>
-          <div class="step-desc">Use your phone's camera to scan the code above.</div>
-        </div>
-        
-        <div class="step">
-          <div class="step-title">Log In with LSU Credentials</div>
-          <div class="step-desc">Sign in to Moodle with your LSU username and password.</div>
-        </div>
-        
-        <div class="step">
-          <div class="step-title">Self-Enroll</div>
-          <div class="step-desc">Click "Enroll me" to join the Fabrication Laboratory course.</div>
+        <div class="columns">
+          <div class="col-left">
+            <div class="scan-label">Scan to Enroll</div>
+            
+            <div class="qr-box">
+              <img src="../assets/Moodle_QR.png" alt="QR Code">
+            </div>
+            
+            <div class="steps">
+              <div class="step">
+                <span class="step-num">1</span>
+                <span>Scan with your phone</span>
+              </div>
+              <div class="step">
+                <span class="step-num">2</span>
+                <span>Log in with LSU credentials</span>
+              </div>
+              <div class="step">
+                <span class="step-num">3</span>
+                <span>Click "Enroll me"</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-right">
+            <div class="list-section">
+              <div class="list-title">Find</div>
+              <ul>
+                <li>Material resources</li>
+                <li>Safety info</li>
+                <li>Design resources</li>
+                <li>Submission forms</li>
+                <li>3D Modeling help</li>
+              </ul>
+            </div>
+            
+            <div class="list-section">
+              <div class="list-title">Services</div>
+              <ul>
+                <li>3D Printing</li>
+                <li>CNC Routing</li>
+                <li>3D Scanning</li>
+                <li>Vacuum Forming</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       
-      <div class="right-column">
-        <div class="info-box">
-          <h3>What You'll Find</h3>
-          <ul>
-            <li>Material resources</li>
-            <li>Safety information</li>
-            <li>Design resources</li>
-            <li>Submission forms</li>
-          </ul>
-          
-          <div class="divider"></div>
-          
-          <h3>Services</h3>
-          <ul>
-            <li>3D Printing</li>
-            <li>CNC Routing</li>
-            <li>3D Scanning</li>
-            <li>Vacuum Forming</li>
-            <li>3D modeling help</li>
-          </ul>
+      <div class="footer">
+        <div class="footer-location">
+          Art Building 123 · Atkinson 145<br>
+          Mon–Fri · 8:30 AM – 4:30 PM
         </div>
-      </div>
-    </div>
-    
-    <div class="footer">
-      <div class="lab-info">
-        <p>Art Building 123 · Atkinson 145<br>Monday – Friday · 8:30 AM – 4:30 PM</p>
-      </div>
-      <div class="contact">
-        <div class="contact-email">coad-fablab@lsu.edu</div>
-        <div class="contact-label">Questions?</div>
+        <div class="footer-contact">
+          <div class="footer-label">Questions?</div>
+          <div class="footer-email">coad-fablab@lsu.edu</div>
+        </div>
       </div>
     </div>
   </div>
