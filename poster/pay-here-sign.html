@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Here</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #e8e8e8;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+    
+    .sign {
+      width: 5.5in;
+      height: 4.25in;
+      background: #f4f1e8;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      background: #ff770c;
+      padding: 30px 40px;
+      padding-bottom: 50px;
+    }
+    
+    .lab-name {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #fff;
+      opacity: 0.9;
+    }
+    
+    .main {
+      padding: 0 40px;
+      margin-top: -25px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    h1 {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 0.9;
+      color: #1a1a1a;
+      letter-spacing: -2px;
+    }
+    
+    .headline-sub {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 0.9;
+      color: #ff770c;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+    
+    .info {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+      margin-top: auto;
+      padding-bottom: 30px;
+    }
+    
+    .methods {
+      display: flex;
+      gap: 20px;
+      margin-top: 15px;
+    }
+    
+    .method {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    
+    .method-icon {
+      width: 24px;
+      height: 24px;
+      background: #ff770c;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    
+    .accent-bar {
+      position: absolute;
+      width: 8px;
+      height: 80px;
+      background: #1a1a1a;
+      bottom: 60px;
+      right: 40px;
+    }
+    
+    .accent-square {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff770c;
+      bottom: 150px;
+      right: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sign">
+    <div class="header">
+      <div class="lab-name">Digital Fabrication Laboratory</div>
+    </div>
+    
+    <div class="main">
+      <h1>PAY</h1>
+      <div class="headline-sub">HERE</div>
+      
+      <div class="info">
+        All payments processed at this station.
+        <div class="methods">
+          <div class="method">
+            <div class="method-icon">$</div>
+            Cash
+          </div>
+          <div class="method">
+            <div class="method-icon">C</div>
+            Card
+          </div>
+          <div class="method">
+            <div class="method-icon">T</div>
+            TigerCash
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="accent-bar"></div>
+    <div class="accent-square"></div>
+  </div>
+</body>
+</html>
