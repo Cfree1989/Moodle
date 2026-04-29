@@ -1,5 +1,22 @@
-<div class="box generalbox"
+<div class="box generalbox fab-additive-page"
   style="font-family: Arial, Helvetica, sans-serif; color: #333333; line-height: 1.6; max-width: 1000px; margin: 0 auto; padding: 20px;">
+  <style type="text/css">
+    /* Text links: same blue and size; :visited otherwise purple */
+    .fab-additive-page a:not(.fab-additive-btn),
+    .fab-additive-page a:not(.fab-additive-btn):visited {
+      color: #2196f3 !important;
+      text-decoration: none;
+      font-size: 16px !important;
+    }
+    .fab-additive-page a:not(.fab-additive-btn):hover {
+      text-decoration: underline;
+    }
+    .fab-additive-page a.fab-additive-btn,
+    .fab-additive-page a.fab-additive-btn:visited {
+      color: #ffffff !important;
+      font-size: 18px !important;
+    }
+  </style>
   <h1
     style="font-size: 48px; font-weight: bold; color: #2196f3; text-align: center; margin-bottom: 30px;">
     Additive</h1>
@@ -172,7 +189,7 @@
       </tr>
     </tbody>
   </table>
-  <!-- PrusaSlicer download and lab config bundle: replace draftfile.php URL with pluginfile URL after course publish -->
+  <!-- PrusaSlicer: lab config bundle linked from SharePoint; swap URL if file moves -->
   <table
     style="width: 100%; border-collapse: separate; border-spacing: 20px; margin-top: 20px;">
     <tbody>
@@ -186,25 +203,36 @@
                   style="background-color: #f5f5f7; border-radius: 18px; padding: 30px !important; box-sizing: border-box; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                   <h2
                     style="font-size: 24px; font-weight: 600; color: #000000; margin-top: 0; margin-bottom: 20px;">
-                    PrusaSlicer and lab print settings</h2>
-                  <ul>
-                    <li style="font-size: 16px; text-align: left;"><a
-                        style="font-size: 14pt"
+                    PrusaSlicer and Lab Print Settings</h2>
+                  <p style="font-size: 16px; color: #333333; margin: 0 0 16px 0;">
+                    We often see scale issues and parts that are too small to
+                    print reliably. To avoid repeated rejections, install
+                    PrusaSlicer and import our lab settings so you can verify
+                    your model before you submit. When the model looks the way
+                    you want, save your PrusaSlicer project and upload that
+                    file. PrusaSlicer projects are <code>.3mf</code> files, the
+                    preferred format in the lab.</p>
+                  <ul
+                    style="list-style-type: none; padding-left: 0; font-size: 16px; margin: 0 0 20px 0;">
+                    <li style="margin-bottom: 10px;"><a
+                        style="color: #2196f3; text-decoration: none;"
                         href="https://www.prusa3d.com/p/prusaslicer/"
                         target="_blank" rel="noopener noreferrer">PrusaSlicer
                         Download</a></li>
-                    <li style="font-size: 16px;"><a style="font-size: 14pt"
-                        href="https://moodle.lsu.edu/draftfile.php/1577924/user/draft/959650953/Prusa%20Lab%20Settings.ini"
-                        target="_blank" rel="noopener noreferrer">Lab
-                        Settings</a></li>
+                    <li style="margin-bottom: 0;"><a
+                        style="color: #2196f3; text-decoration: none;"
+                        href="https://lsumail2-my.sharepoint.com/:u:/r/personal/cfree3_lsu_edu/Documents/Lab/Machines%20+%20Software/Prusa/PrusaSlicer_config_bundle.ini?csf=1&amp;web=1&amp;e=EbJbf0"
+                        target="_blank" rel="noopener noreferrer">PrusaSlicer
+                        Lab Settings</a> (config bundle, <code>.ini</code>)</li>
                   </ul>
                   <h3
                     style="font-size: 18px; font-weight: 600; color: #000000; margin: 0 0 12px 0;">
                     How to import the config bundle in PrusaSlicer</h3>
                   <ol
                     style="padding-left: 20px; font-size: 16px; margin: 0 0 16px 0;">
-                    <li style="margin-bottom: 10px;">Save <strong>Prusa Lab
-                        Settings.ini</strong> somewhere easy to find on your
+                    <li style="margin-bottom: 10px;">Save the
+                      <strong>PrusaSlicer lab settings</strong>
+                      <code>.ini</code> file somewhere easy to find on your
                       computer.</li>
                     <li style="margin-bottom: 10px;">Open PrusaSlicer.</li>
                     <li style="margin-bottom: 10px;">Go to <strong>File</strong>
@@ -216,17 +244,22 @@
                     <li style="margin-bottom: 10px;">If your browser saved the
                       download as <code>.txt</code>, rename it to
                       <code>.ini</code> before importing.</li>
-                    <li style="margin-bottom: 0;">Use the <strong>Printer
+                    <li style="margin-bottom: 10px;">Use the <strong>Printer
                         settings</strong>, <strong>Print settings</strong>, and
                       <strong>Filament</strong> dropdowns to pick the imported
                       presets for your file.</li>
+                    <li style="margin-bottom: 0;">Optional but recommended:
+                      slice (<strong>Slice now</strong>) to confirm the preview,
+                      supports, and estimated print time. Then use
+                      <strong>File → Save Project As…</strong> to save a
+                      <code>.3mf</code> project file for submission.</li>
                   </ol>
                   <p style="font-size: 14px; color: #666666; margin: 0;">More
                     detail from Prusa: <a
                       style="color: #2196f3; text-decoration: none;"
-                      href="https://help.prusa3d.com/article/how-to-import-and-export-custom-profiles-in-prusaslicer_382766">How
-                      to import and export custom profiles in PrusaSlicer</a>
-                  </p>
+                      href="https://help.prusa3d.com/article/how-to-import-and-export-custom-profiles-in-prusaslicer_382766"
+                      target="_blank" rel="noopener noreferrer">How to import and
+                      export custom profiles in PrusaSlicer</a></p>
                 </td>
               </tr>
             </tbody>
@@ -337,7 +370,7 @@
     </tbody>
   </table>
   <!-- Submission Button -->
-  <div style="text-align: center; margin-top: 20px;"><a
+  <div style="text-align: center; margin-top: 20px;"><a class="fab-additive-btn"
       style="display: inline-block; padding: 15px 30px; background-color: #2196f3; color: #ffffff !important; text-decoration: none; border-radius: 30px; font-size: 18px; font-weight: 600; transition: background-color 0.3s;"
       href="https://apps.powerapps.com/play/e/default-2d4dad3f-50ae-47d9-83a0-9ae2b1f466f8/a/d47fb3d1-176f-4f5a-adae-93185d79eb17?tenantId=2d4dad3f-50ae-47d9-83a0-9ae2b1f466f8&amp;hint=827e777a-6843-4d41-a8ae-d42b7e44395a&amp;sourcetime=1772122764492">Print
       Submission</a></div>
