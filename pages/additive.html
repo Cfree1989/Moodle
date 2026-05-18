@@ -1,19 +1,28 @@
 <div class="box generalbox fab-additive-page"
   style="font-family: Arial, Helvetica, sans-serif; color: #333333; line-height: 1.6; max-width: 1000px; margin: 0 auto; padding: 20px;">
   <style type="text/css">
-    /* Text links: same blue and size; :visited otherwise purple */
+    /* Text links: one blue (#2196f3) for default, visited, and focus; theme CSS often overrides plain <a> */
     .fab-additive-page a:not(.fab-additive-btn),
-    .fab-additive-page a:not(.fab-additive-btn):visited {
+    .fab-additive-page a:not(.fab-additive-btn):visited,
+    .fab-additive-page a:not(.fab-additive-btn):focus,
+    .fab-additive-page a:not(.fab-additive-btn):active {
       color: #2196f3 !important;
+      -webkit-text-fill-color: #2196f3;
       text-decoration: none;
       font-size: 16px !important;
     }
     .fab-additive-page a:not(.fab-additive-btn):hover {
+      color: #2196f3 !important;
+      -webkit-text-fill-color: #2196f3;
       text-decoration: underline;
     }
     .fab-additive-page a.fab-additive-btn,
-    .fab-additive-page a.fab-additive-btn:visited {
+    .fab-additive-page a.fab-additive-btn:visited,
+    .fab-additive-page a.fab-additive-btn:focus,
+    .fab-additive-page a.fab-additive-btn:active,
+    .fab-additive-page a.fab-additive-btn:hover {
       color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff;
       font-size: 18px !important;
     }
   </style>
@@ -62,43 +71,43 @@
                   <ul
                     style="list-style-type: none; padding-left: 0; font-size: 16px; margin: 0;">
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://help.prusa3d.com/article/modeling-with-3d-printing-in-mind_164135">Prusa
                         Modeling for 3D Printing</a></li>
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://lsumail2-my.sharepoint.com/:b:/g/personal/cfree3_lsu_edu/ESqJK6URvvpHk1jOZgN6CCoBT2TsEUNFVkis--hDeqU3JQ?e=ml7G1C">Design
                         Guidelines for 3D Printing</a></li>
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://lsumail2-my.sharepoint.com/:b:/g/personal/cfree3_lsu_edu/EZZbyCTth0dKlr-_tNrp_4cBxnuWF8r5UOr2bX0sWFJ1Hg?e=jXKRxs">3D
                         Printing for Architecture</a></li>
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://lsumail2-my.sharepoint.com/:b:/g/personal/cfree3_lsu_edu/EVeS3OH_MLlCqYSgOWMXK4kBDb2vXtjokfDLXi8NpSYjBg?e=sNBBar">Design
                         for 3D Printing</a></li>
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://lsumail2-my.sharepoint.com/:b:/g/personal/cfree3_lsu_edu/EdbHiNtCmdJMtdDitVd6raQByOkOWihx4CAT8N2MAxZWvA?e=6ReG5D">3D
                         Printing for Interior Design</a></li>
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://lsumail2-my.sharepoint.com/:b:/g/personal/cfree3_lsu_edu/EYYj74oWs3lKi-7AEwNKY4cB_3m3t28KVDcfCD5Ni1TMmg?e=kpaJxm">3D
                         Printing Best Practices</a></li>
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://lsumail2-my.sharepoint.com/:b:/g/personal/cfree3_lsu_edu/EQ9Cblg9Rr1FjbpvEvCWRPgBGJjQcBBiB9usn-9TupXnCA?e=kmxBiG">Preparing
                         Rhino Files for 3D Printing</a></li>
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://lsumail2-my.sharepoint.com/:b:/g/personal/cfree3_lsu_edu/EeMY7Iy__xtLn5AybQcvj7AB1d-kZ7sP9rvshuYehJaUQg?e=aaZbbK">Rhino
                         3D Printing Checks</a></li>
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://lsumail2-my.sharepoint.com/:b:/g/personal/cfree3_lsu_edu/EZUTiyn_jqRLtcQQEGcyD4ABsmrSSDkCeu3c2qsPRUgCsA?e=fg8NYi">Form
                         3+ Design Guide</a></li>
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://lsumail2-my.sharepoint.com/:b:/g/personal/cfree3_lsu_edu/EaDAgocT8HJIiwG6a3p5TN0BEDyc8pKaMLg8xIZ0sVpe4w?e=LVGulw">Form
                         Fuse Design Guide</a></li>
                   </ul>
@@ -189,7 +198,7 @@
       </tr>
     </tbody>
   </table>
-  <!-- PrusaSlicer: lab config bundle linked from SharePoint; swap URL if file moves -->
+  <!-- PrusaSlicer: lab config bundle .zip hosted in Moodle (same draft area as page assets); re-upload if draft URL breaks after edit -->
   <table
     style="width: 100%; border-collapse: separate; border-spacing: 20px; margin-top: 20px;">
     <tbody>
@@ -215,24 +224,25 @@
                   <ul
                     style="list-style-type: none; padding-left: 0; font-size: 16px; margin: 0 0 20px 0;">
                     <li style="margin-bottom: 10px;"><a
-                        style="color: #2196f3; text-decoration: none;"
+                        style="color: #2196f3 !important; text-decoration: none;"
                         href="https://www.prusa3d.com/p/prusaslicer/"
                         target="_blank" rel="noopener noreferrer">PrusaSlicer
                         Download</a></li>
                     <li style="margin-bottom: 0;"><a
-                        style="color: #2196f3; text-decoration: none;"
-                        href="https://lsumail2-my.sharepoint.com/:u:/r/personal/cfree3_lsu_edu/Documents/Lab/Machines%20+%20Software/Prusa/PrusaSlicer_config_bundle.ini?csf=1&amp;web=1&amp;e=EbJbf0"
-                        target="_blank" rel="noopener noreferrer">PrusaSlicer
-                        Lab Settings</a> (config bundle, <code>.ini</code>)</li>
+                        style="color: #2196f3 !important; text-decoration: none;"
+                        href="https://moodle.lsu.edu/draftfile.php/1577924/user/draft/201005999/PrusaSlicer_config_bundle.zip">PrusaSlicer
+                        Lab Settings</a> (config bundle, <code>.zip</code> —
+                        contains the <code>.ini</code> to import)</li>
                   </ul>
                   <h3
                     style="font-size: 18px; font-weight: 600; color: #000000; margin: 0 0 12px 0;">
                     How to import the config bundle in PrusaSlicer</h3>
                   <ol
                     style="padding-left: 20px; font-size: 16px; margin: 0 0 16px 0;">
-                    <li style="margin-bottom: 10px;">Save the
-                      <strong>PrusaSlicer lab settings</strong>
-                      <code>.ini</code> file somewhere easy to find on your
+                    <li style="margin-bottom: 10px;">Download the
+                      <strong>PrusaSlicer lab settings</strong> <code>.zip</code>
+                      from the link above. Extract it if needed and keep the
+                      bundled <code>.ini</code> somewhere easy to find on your
                       computer.</li>
                     <li style="margin-bottom: 10px;">Open PrusaSlicer.</li>
                     <li style="margin-bottom: 10px;">Go to <strong>File</strong>
@@ -256,7 +266,7 @@
                   </ol>
                   <p style="font-size: 14px; color: #666666; margin: 0;">More
                     detail from Prusa: <a
-                      style="color: #2196f3; text-decoration: none;"
+                      style="color: #2196f3 !important; text-decoration: none;"
                       href="https://help.prusa3d.com/article/how-to-import-and-export-custom-profiles-in-prusaslicer_382766"
                       target="_blank" rel="noopener noreferrer">How to import and
                       export custom profiles in PrusaSlicer</a></p>
